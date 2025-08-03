@@ -8,6 +8,7 @@ public class RutaInicial extends RouteBuilder {
 
         from("direct:entradaPedido")
                 .log("Entro una peticion: ${body}")
+                .transform(simple("peticion recibida."))
                 .end();
 
     }
